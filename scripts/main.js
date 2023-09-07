@@ -125,3 +125,7 @@ closeBtn2.addEventListener('click', function () {
 popupCloseBtn2.addEventListener('click', function () {
   popup2.style.display = 'none';
 });
+
+document.addEventListener('copy', function(e) {
+  e.preventDefault();
+});
