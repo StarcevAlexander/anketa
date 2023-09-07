@@ -14,7 +14,7 @@ input[type="radio"] {
 #offer-btn{
   cursor: pointer;
 }
-#popup {
+#popup, #popup2 {
   display: none;
   position: fixed;
   top: 15px;

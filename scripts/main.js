@@ -87,7 +87,7 @@ document.getElementById('tg').addEventListener('submit', function (e) {
 // Получаем ссылки на элементы
 const popupBtn = document.getElementById('popup-btn');
 const popup = document.getElementById('popup');
-const closeBtn = document.getElementsByClassName('close')[0];
+const closeBtn = document.getElementById('close');
 const popupCloseBtn = document.getElementById('popup-close-btn');
 
 // Обработчик события "клик" на кнопке открытия попапа
@@ -106,19 +106,22 @@ popupCloseBtn.addEventListener('click', function () {
 });
 
 
-//ghb нажатии скачиваем файлы договора
-const downloadButton = document.getElementById('offer-btn');
-downloadButton.addEventListener('click', () => {
-  const fileURL = './договоры.zip';
-  // Создаем ссылку элемента <a> для скачивания файла
-  const downloadLink = document.createElement('a');
-  downloadLink.href = fileURL;
-  // Устанавливаем имя файла для сохранения
-  downloadLink.download = 'files.zip';
-  // Добавляем элемент <a> на страницу
-  document.body.appendChild(downloadLink);
-  // Имитируем клик по ссылке для запуска скачивания
-  downloadLink.click();
-  // Удаляем элемент <a> после завершения скачивания
-  document.body.removeChild(downloadLink);
+const offerBtn = document.getElementById('offer-btn');
+const popup2 = document.getElementById('popup2');
+const closeBtn2 = document.getElementById('close2');
+const popupCloseBtn2 = document.getElementById('popup-close-btn2');
+
+// Обработчик события "клик" на кнопке открытия попапа
+offerBtn.addEventListener('click', function () {
+  popup2.style.display = 'flex';
+});
+
+// Обработчик события "клик" на крестике
+closeBtn2.addEventListener('click', function () {
+  popup2.style.display = 'none';
+});
+
+// Обработчик события "клик" на кнопке "Ок"
+popupCloseBtn2.addEventListener('click', function () {
+  popup2.style.display = 'none';
 });
