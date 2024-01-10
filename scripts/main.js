@@ -10,14 +10,14 @@ function showInput(value) {
 }
 
 //открытие поля по наличию карты
-function checkCard(value) {
-  if (value === "Нет") {
-    document.getElementById("inputCard").style.display = "none";
-  }
-  if (value === "Да") {
-    document.getElementById("inputCard").style.display = "block";
-  }
-}
+// function checkCard(value) {
+//   if (value === "Нет") {
+//     document.getElementById("inputCard").style.display = "none";
+//   }
+//   if (value === "Да") {
+//     document.getElementById("inputCard").style.display = "block";
+//   }
+// }
 
 
 //номер токена
@@ -57,18 +57,19 @@ document.getElementById('tg').addEventListener('submit', function (e) {
      ближайшая остановка общественного транспорта: ${this.nearest_transport_stop.value}
      мобильный телефон: ${this.mobile_phone.value}
      наличие карты: ${this.has_card.value}
-     данные карты:
-     Получатель: ${this.cardName.value}
-     Номер счёта: ${this.cardNumber.value}
-     Банк получателя: ${this.personBank.value}
-     БИК: ${this.bik.value}
-     Корр. счёт: ${this.korrNumber.value}
-     ИНН банка: ${this.innNumber.value}
-     КПП: ${this.kppNumber.value}
-     ОКПО: ${this.okpoNumber.value}
-     ОГРН: ${this.ogrnNumber.value}
-     SWIFT-код: ${this.swift_Number.value}
-     Почтовый адрес банка: ${this.bankAdress.value}`
+     `
+     //  данные карты:
+     //  Получатель: ${this.cardName.value}
+     //  Номер счёта: ${this.cardNumber.value}
+     //  Банк получателя: ${this.personBank.value}
+     //  БИК: ${this.bik.value}
+     //  Корр. счёт: ${this.korrNumber.value}
+     //  ИНН банка: ${this.innNumber.value}
+     //  КПП: ${this.kppNumber.value}
+     //  ОКПО: ${this.okpoNumber.value}
+     //  ОГРН: ${this.ogrnNumber.value}
+     //  SWIFT-код: ${this.swift_Number.value}
+     //  Почтовый адрес банка: ${this.bankAdress.value}
 
   axios.post(url_api, {
     chat_id: CHAT_ID,
